@@ -4,13 +4,13 @@ Domain Generalization for Robust Diabetic Retinopathy Classification is a thesis
 In this thesis, it has been suggested to apply domain adversarial training, an unsupervised, multi-source, multi-target domain generalization model that has been proven to perform robust diabetic retinopathy classification.
 
 ## Description
-Three different models have been used for this thesis: baseline model, joint training model and domain adversarial training model. 
+Three different models have been used for this thesis: the baseline model, the joint training model, and the domain adversarial training model. 
 
-In addition, the influence of the data augmentations in achieving a robust model for domain generalization has been analyzed.
+In addition, the influence of the data augmentations on achieving a robust model for domain generalization has been analyzed.
 
 An ablation study of the different techniques utilized in this thesis has been performed.
 
-A general overview of the proposed method can be seen in the following Figure. 
+A general overview of the proposed method can be seen in the following Figure: 
 
 ![Image](Images/Proposed_method.jpg)
 
@@ -25,15 +25,15 @@ $ pip install -r requirements.txt
 
 ## Datasets 
 
-EyePACS dataset has been used to carry out the different experiments. Please download the dataset here: [EyePACS dataset](https://www.kaggle.com/competitions/diabetic-retinopathy-detection/data).
+The EyePACS dataset has been used to carry out the different experiments. Please download the dataset here: [EyePACS dataset](https://www.kaggle.com/competitions/diabetic-retinopathy-detection/data).
 
-In addition, this dataset has been separated by the different cameras that were used to acquire it. The labels have been provided by Yang, Dalu, et al. [1]. It has to be mentioned that they stated differences between these labels and the ones used by them in their approach. These labels are provided in Data_preprocessing/Cameras_labels.
+In addition, this dataset has been separated by the different cameras that were used to acquire it. The labels have been provided by Yang, Dalu, et al. [1]. It has to be mentioned that they stated differences between these labels and the ones used by them in their approach. These labels are provided in Data_preprocessing/Cameras_labels. The original dataset can be separated by cameras by using "Dataset.py"
 
-Moreover, bad quality images has also been removed. These labels have been created by Fu, Huazhu, et al. [2], who studied the quality of the images, creating the Eye-Quality (EyeQ) Assessment Dataset. The labels can be downloaded here: [EyeQ Assessment Dataset](https://github.com/HzFu/EyeQ/tree/master/data). In addition, they are provided in Data_preprocessing/Quality labels. 
+Moreover, bad-quality images have also been removed. These labels have been created by Fu, Huazhu, et al. [2], who studied the quality of the images, creating the Eye-Quality (EyeQ) Assessment Dataset. The labels can be downloaded here: [EyeQ Assessment Dataset](https://github.com/HzFu/EyeQ/tree/master/data). In addition, they are provided in Data_preprocessing/Quality labels. 
 
-Only a subset (28.792) of the total images were categorised by the previous dataset, therefore the quality of the remaining images was also assessed. It was observed that certain images were still entirely dark, thus those whose brightness fell below a predetermined threshold were additionally eliminated. This is performed by "Dark_images.ipynb". 
+Only a subset (28.792) of the total images were categorized by the previous dataset, therefore, the quality of the remaining images was also assessed. It was observed that certain images were still entirely dark, thus, those whose brightness fell below a predetermined threshold were additionally eliminated. This is performed by "Dark_images.ipynb". 
 
-Finally, the data has to have this form: 
+Finally, the data has to have this form, where each of the cameras datasets is split into train, val, and test: 
 
 ```bash
 ├── your_data_dir
