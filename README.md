@@ -4,13 +4,16 @@ Domain Generalization for Robust Diabetic Retinopathy Classification is a thesis
 In this thesis, it has been suggested to apply domain adversarial training, an unsupervised, multi-source, multi-target domain generalization model that has been proven to perform robust diabetic retinopathy classification.
 
 ## Description
-Three different models have been used for this thesis: baseline model, joint training model and domain adversarial training model. In addition, the influence of the data augmentations in achieving a robust model for domain generalization has been analyzed. An ablation study of the different techniques has been performed. A general overview of the proposed method can be seen in the following Figure. 
+Three different models have been used for this thesis: baseline model, joint training model and domain adversarial training model. 
+
+In addition, the influence of the data augmentations in achieving a robust model for domain generalization has been analyzed.
+
+An ablation study of the different techniques utilized in this thesis has been performed.
+
+A general overview of the proposed method can be seen in the following Figure. 
 
 ![Image](Images/Proposed_method.jpg)
 
-EyePACS dataset has been used to carry out the different experiments. Please download the dataset here: [EyePACS dataset](https://www.kaggle.com/competitions/diabetic-retinopathy-detection/data).
-
-In addition, this dataset has been separated by the different cameras that were used to acquire it. The labels have been provided by Yang, Dalu, et al. [1]. It has to be mentioned that they stated differences between these labels and the ones used by them in their approach. 
 
 ## Dependencies 
 
@@ -18,6 +21,33 @@ Please install the dependencies required:
 
 ```bash
 $ pip install -r requirements.txt
+```
+
+## Datasets 
+
+EyePACS dataset has been used to carry out the different experiments. Please download the dataset here: [EyePACS dataset](https://www.kaggle.com/competitions/diabetic-retinopathy-detection/data).
+
+In addition, this dataset has been separated by the different cameras that were used to acquire it. The labels have been provided by Yang, Dalu, et al. [1]. It has to be mentioned that they stated differences between these labels and the ones used by them in their approach. These labels are provided in Data_preprocessing/Cameras_labels.
+
+Moreover, bad quality images has also been removed. 
+
+Finally, the data has to have this form: 
+
+```bash
+├── your_data_dir
+    ├── camera1
+        ├── train
+            ├── image.jpg
+            ├── ...
+        ├── val
+            ├── image.jpg
+            ├── ...
+        ├── test
+            ├── image.jpg
+            ├── ...
+    ├── camera2
+    ├── camera3
+    ├── ...
 ```
 
 ## Code description
