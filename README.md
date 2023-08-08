@@ -12,6 +12,14 @@ EyePACS dataset has been used to carry out the different experiments. Please dow
 
 In addition, this dataset has been separated by the different cameras that were used to acquire it. The labels have been provided by Yang, Dalu, et al. [1]. It has to be mentioned that they stated differences between these labels and the ones used by them in their approach. 
 
+## Dependencies 
+
+Please install the dependencies required:
+
+```bash
+$ pip install -r requirements.txt
+```
+
 ## Code description
 
 - Dataset.py: this file allows to separate the images from EyePACS dataset by their corresponding camera labels.
