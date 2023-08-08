@@ -4,7 +4,7 @@ Domain Generalization for Robust Diabetic Retinopathy Classification is a thesis
 In this thesis, it has been suggested to apply domain adversarial training, an unsupervised, multi-source, multi-target domain generalization model that has been proven to perform robust diabetic retinopathy classification.
 
 ## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Three different models have been used for this thesis: baseline model, joint training model and domain adversarial training model. In addition, the influence of the data augmentations in achieving a robust model for domain generalization has been analyzed. An ablation study of the different techniques has been performed. A general overview of the proposed method can be seen in the following Figure. 
 
 ![Image](Images/Proposed_method.jpg)
 
