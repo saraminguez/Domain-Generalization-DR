@@ -1,0 +1,21 @@
+The following parameters have been used to train the models: 
+
+--labels_loc '/data_a/0minguez/degree_domain_labels.csv' 
+--batch_size 16 
+--log_dir '/data_a/0minguez/your_dir'
+--num_workers 6  
+--lr 1e-4 
+--color_transformations 'no' // 'color' // 'augmix'
+--mode 'train'
+ --final_checkpoint_name 'name_to_save_checkpoint' 
+
+
+Baseline model : 
+--images_loc '/data_a/0minguez/70-15-15/label_1'
+
+Joint training model and domain adversarial model: 
+--images_loc '/data_a/0minguez/70-15-15/label_1' '/data_a/0minguez/70-15-15/label_2' '/data_a/0minguez/70-15-15/label_3' 
+
+Domain adversarial model: 
+--lambda_value 0.3
+ 
