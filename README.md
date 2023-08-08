@@ -60,14 +60,14 @@ The external datasets used to evaluate the performance of the models are the fol
 ## Training models
 The baseline and joint training models can be trained by running, for example, the following command:  
 ```
- python ResNet_model.py --images_loc '/data_a/0minguez/70-15-15/label_1' --labels_loc '/data_a/0minguez/degree_domain_labels.csv' --log_dir '/data_a/0minguez/final_experiment_joint/' --batch_size 16 --max_epochs 70 --num_workers 6  --lr 1e-4  --color_transformations 'no' --mode 'train' --es_patience 10 
+ python ResNet_model.py --images_loc '/data_a/0minguez/70-15-15/label_1' --labels_loc '/data_a/0minguez/degree_domain_labels.csv' --log_dir '/data_a/0minguez/final_experiment_joint/' --batch_size 16 --es_patience 10 --num_workers 6  --lr 1e-4  --color_transformations 'no' --mode 'train' --es_patience 10 
 ```
 Training one model or the other, will depend on the number of datasets passed to the --images_loc argument. If only one datasets is passed, we will obtain results for the baseline model, but if more are passed then we will performed joint_training model. 
 
 The adversarial model by running, for example, the following command:
 
 ```
-python Adversarial_training.py --images_loc '/data_a/0minguez/70-15-15/label_1/' '/data_a/0minguez/70-15-15/label_2' '/data_a/0minguez/70-15-15/label_3' --labels_loc '/data_a/0minguez/degree_domain_labels.csv' --log_dir '/data_a/0minguez/adversarial_lambda/' --batch_size 16 --max_epochs 50 --num_workers 6  --lr 1e-4  --color_transformations 'no' --final_checkpoint_name 'adversarial_prueba_newdisc' --mode 'train' --lambda_value 0.3
+python Adversarial_training.py --images_loc '/data_a/0minguez/70-15-15/label_1/' '/data_a/0minguez/70-15-15/label_2' '/data_a/0minguez/70-15-15/label_3' --labels_loc '/data_a/0minguez/degree_domain_labels.csv' --log_dir '/data_a/0minguez/adversarial_lambda/' --batch_size 16 --num_workers 6  --lr 1e-4  --color_transformations 'no' --final_checkpoint_name 'adversarial_prueba_newdisc' --mode 'train' --lambda_value 0.3
 ```
 
 Data augmentations will be performed depending on the value passed to the --color_transformations argument. 'no', no data augmentation will be performed; "color,"  color augmentation will be applied, and 'augmix', AugMix transformation will be add.
@@ -77,7 +77,7 @@ In addition to quantitative results, we have performed qualitative analysis. For
 The UMAP representation can be obtained with the following command, using `UMAP.py` or `UMAP_adversarial.py` depending on the model trained: 
 
 ```
-ulimit -n 50000 && python  UMAP.py --images_loc '/data_a/0minguez/70-15-15/label_1' --labels_loc '/data_a/0minguez/degree_domain_labels.csv' --batch_size 16 --max_epochs 25 --num_workers 12  --checkpoint_path '/data/0minguez/tfm-sara-minguez-retinopatia-diabetica/checkpoints/final-color.ckpt' --folder_embedding_name 'color'
+ulimit -n 50000 && python  UMAP.py --images_loc '/data_a/0minguez/70-15-15/label_1' --labels_loc '/data_a/0minguez/degree_domain_labels.csv' --batch_size 16 --num_workers 12  --checkpoint_path '/data/0minguez/tfm-sara-minguez-retinopatia-diabetica/checkpoints/final-color.ckpt' --folder_embedding_name 'color'
 ```
 
 ## Author
