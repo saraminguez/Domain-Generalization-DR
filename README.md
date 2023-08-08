@@ -8,6 +8,8 @@ Three different models have been used for this thesis: baseline model, joint tra
 
 ![Image](Images/Proposed_method.jpg)
 
+EyePACS dataset has been used to carry out the different experiments. Please download the dataset here: [PubMed Open Access Non-Commercial Data Dump](https://www.kaggle.com/competitions/diabetic-retinopathy-detection/data). In addition, this dataset has been separated by the different cameras that were used to acquire it.
+
 ## Code description
 
 - Dataset.py: this file allows to separate the images from EyePACS dataset by their corresponding camera labels.
