@@ -1,5 +1,6 @@
 # Domain Generalization for Robust Diabetic Retinopathy Classification
 Domain Generalization for Robust Diabetic Retinopathy Classification is a thesis project for M.Sc. Intelligent Adaptive Systems.
+
 In this thesis, it has been suggested to apply domain adversarial training, an unsupervised, multi-source, multi-target domain generalization model that has been proven to perform robust diabetic retinopathy classification.
 
 ## Description
