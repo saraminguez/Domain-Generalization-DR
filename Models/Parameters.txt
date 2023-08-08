@@ -5,8 +5,9 @@ The following parameters have been used to train the models:
 --log_dir '/data_a/0minguez/your_dir'
 --num_workers 6  
 --lr 1e-4 
+--es_patience 10 
 --color_transformations 'no' // 'color' // 'augmix'
---mode 'train'
+--mode 'train' // 'eval'
  --final_checkpoint_name 'name_to_save_checkpoint' 
 
 
