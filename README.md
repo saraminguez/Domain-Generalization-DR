@@ -8,7 +8,9 @@ Three different models have been used for this thesis: baseline model, joint tra
 
 ![Image](Images/Proposed_method.jpg)
 
-EyePACS dataset has been used to carry out the different experiments. Please download the dataset here: [PubMed Open Access Non-Commercial Data Dump](https://www.kaggle.com/competitions/diabetic-retinopathy-detection/data). In addition, this dataset has been separated by the different cameras that were used to acquire it.
+EyePACS dataset has been used to carry out the different experiments. Please download the dataset here: [EyePACS dataset](https://www.kaggle.com/competitions/diabetic-retinopathy-detection/data).
+
+In addition, this dataset has been separated by the different cameras that were used to acquire it. The labels have been provided by Yang, Dalu, et al. [1]. It has to be mentioned that they stated differences between these labels and the ones used by them in their approach. 
 
 ## Code description
 
@@ -25,3 +27,7 @@ Use examples liberally, and show the expected output if you can. It's helpful to
 
 ## Author
 Sara Mínguez Monedero
+
+## References 
+[1] D. Yang, Y. Yang, T. Huang, B. Wu, L. Wang, and Y. Xu, “Residual-cyclegan based camera adaptation for robust diabetic retinopathy screening,” in International Conference on Medical Image Computing and Computer-Assisted Intervention, pp. 464–474, Springer, 2020.
+
